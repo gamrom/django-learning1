@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  값 두개 입력 <br>
+  <form action="{% url 'main2' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="title">
+    <input type="text" name="content">
+    <button type="submit">확인</button>
+  </form>
+  <a href="{% url 'first'%}">퍼스트로 이동</a>
+{% endblock %}
