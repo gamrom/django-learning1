@@ -11,3 +11,7 @@ def main2(request):
         receivetitle = request.POST.get('title')
         receivecontent = request.POST.get('content')
         return render(request, 'main2.html', {'puttitle': receivetitle, 'putcontent': receivecontent})
+    else:
+        receivetitle = "값 없음"
+        receivecontent = "값 없음"
+        return render(request, 'main2.html', {'puttitle': receivetitle, 'putcontent': receivecontent})
